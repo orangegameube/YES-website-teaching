@@ -1,19 +1,19 @@
 var layout = {
   title: {
-    text:'Plot Title',
+    text:'Sample Vs. Blue Paper Reflectivity',
     font: {
-      family: 'Courier New, monospace',
+      family: 'Times New Roman',
       size: 24
     },
     xref: 'paper',
     x: 0.05,
   },
-  paper_bgcolor: "orange",
+  paper_bgcolor: "white",
   xaxis: {
     title: {
-      text: 'x Axis Line',
+      text: 'Wavelength (nm)',
       font: {
-        family: 'Courier New, monospace',
+        family: 'Times New Roman',
         size: 18,
         color: '#7f7f7f'
       }
@@ -21,9 +21,9 @@ var layout = {
   },
   yaxis: {
     title: {
-      text: 'y Axis Line',
+      text: '% reflectivity',
       font: {
-        family: 'Courier New, monospace',
+        family: 'Times New Roman',
         size: 18,
         color: '#7f7f7f'
       }
