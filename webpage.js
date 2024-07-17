@@ -1,45 +1,18 @@
-var layout = {
-  title: {
-    text:'Sample Vs. Blue Paper Reflectivity',
-    font: {
-      family: 'Times New Roman',
-      size: 24
-    },
-    xref: 'paper',
-    x: 0.05,
-  },
-  paper_bgcolor: "white",
-  xaxis: {
-    title: {
-      text: 'Wavelength (nm)',
-      font: {
-        family: 'Times New Roman',
-        size: 18,
-        color: '#7f7f7f'
-      }
-    },
-  },
-  yaxis: {
-    title: {
-      text: '% reflectivity',
-      font: {
-        family: 'Times New Roman',
-        size: 18,
-        color: '#7f7f7f'
-      }
-    }
-  }
-};
+var trace1 = {
+  x: [20.8, 13.23, 14.68, 14.65, 9.62, 8.72, 17.93, 21.92, 18.33, 52.06, 7.99, 93.08],
+  y: [95, 844, 1009, 1050, 999, 1126, 948, 893, 902, 871, 883, 818],
+  name: 'Sample Paper',
+  type: 'bar',
+}
 
-TESTER = document.getElementById("tester");
-Plotly.newPlot(
-  TESTER,
-  [
-    {
-      x: ['red', 'green', 'orange', 'yellow', 'purple'],
-      y: [1, 2, 4, 8, 16],
-    type: 'bar'
-    }
-  ],
-  layout
-);
+var trace2 = {
+  x: [20.8, 13.23, 14.68, 14.65, 9.62, 8.72, 17.93, 21.92, 18.33, 52.06, 7.99, 93.08],
+  y: [95, 251, 216, 235, 182, 185, 248, 270, 243, 499, 158, 768],
+  name: "Blue Paper",
+  type: 'bar'
+}
+
+
+var data = [trace1, trace2];
+var layout = {barmode: 'group'};
+Plotly.newPlot('myDiv', data, layout);
